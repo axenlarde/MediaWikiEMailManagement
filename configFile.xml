@@ -1,0 +1,56 @@
+<xml>
+	<config>
+		<wiki>
+			<ipwiki>192.168.20.110</ipwiki><!--IP du wiki-->
+			<urlwiki>http://192.168.20.110/wiki/mediawiki/index.php/</urlwiki><!--Permet de générer les liens vers les articles contenus dans le mail-->
+			<portwiki>80</portwiki>
+			<wikitimeout>10000</wikitimeout>
+			<wikiuser>admin</wikiuser><!--Compte d'accès en admin au wiki-->
+			<wikiuserpassword>*****</wikiuserpassword>
+			<wikidbname>my_wiki</wikidbname><!--Nom de la base de données MySQL du wiki-->
+			<wikidbuser>wikiuser</wikidbuser><!--Nom de l'utilisateur d'accès à la base de données-->
+			<wikidbpassword>******</wikidbpassword>
+		</wiki>
+		<misc>
+			<getusermethod>jdbc</getusermethod><!--jdbc ou http--><!--Indique la méthode pour récupérer la liste des utilisateurs-->
+			<ispicture>jpg,png,jpeg,JPG,PNG,JPEG</ispicture><!--liste des extension considérées comme étant des images-->
+			<maxthread>10</maxthread>
+			<loglevel>INFO</loglevel>
+			<removesign>true</removesign><!--Si true, le wiki retire automatiquement la signature de l'utilisateur située en fin d'email-->
+			<removewarn>true</removewarn><!--Si true, le wiki retire automatiquement les banières d'avertissement situées en fin d'email-->
+			<temppath></temppath><!--Répertoire de stockage temporaire des fichier joins aux emails-->
+			<maxfilesize>21000000</maxfilesize><!--Taille maximum des pièces jointes gérées-->
+			<minimumrealname>3</minimumrealname><!--Taille minimum des real name gérés-->
+			<emailusernotallowed>Bonjour,\r\nVotre demande de creation d'un article a bien ete recue. Malheureusement, votre email n'a pas ete reconnu. Il n'a donc pas ete possible d'acceder a votre requete et aucun article n'a ete cree.\r\nCeci est un email de reponse automatique, veuillez ne pas y repondre.</emailusernotallowed>
+			<emailnotallowed>Un email inconnu a essaye de creer un article.</emailnotallowed>
+			<emailusercreationerror>Bonjour,\r\nVotre demande de creation d'un article a bien ete recue. Malheureusement, une erreur systeme s'est produite. L'article n'a donc pas ete cree. Un email d'echec a ete envoye a l'administrateur du systeme.\r\nCeci est un email de reponse automatique, veuillez ne pas y repondre.</emailusercreationerror>
+			<emailusercreationsuccess>Votre article a ete cree avec succes.</emailusercreationsuccess>
+			<emailcreationsuccess>Un article a ete cree avec succes.</emailcreationsuccess>
+			<emailcreationerror>Une erreur systeme s'est produite. Un article n'a pas pu etre cree.</emailcreationerror>
+		</misc>
+		<pop>
+			<popemailport>995</popemailport>
+			<popemailprotocol>TLS</popemailprotocol>
+			<popemailserver>pop.gmail.com</popemailserver>
+			<popemail>spiewiki.pro@gmail.com</popemail>
+			<popemailpassword>******</popemailpassword>
+			<poptimeout>60000</poptimeout>
+			<popfreq>10000</popfreq>
+		</pop>
+		<smtp>
+			<smtpemailport>465</smtpemailport>
+			<smtpemailprotocol>TLS</smtpemailprotocol>
+			<smtpemailserver>smtp.gmail.com</smtpemailserver>
+			<smtpemail>spiewiki.pro@gmail.com</smtpemail>
+			<smtpemailpassword>*******</smtpemailpassword>
+			<smtpemailadmin>a.ratel@spie.com</smtpemailadmin><!--Email de l'admin du système. Reçoi les emails d'erreurs-->
+			<smtpemailuserlist>a.ratel@spie.com</smtpemailuserlist><!--Liste des emails notifiés en cas de création d'un article-->
+		</smtp>
+		<replacement>
+			<rep>
+				<find>Cordialement</find>
+				<replace></replace>
+			</rep>
+		</replacement>
+	</config>
+</xml>
